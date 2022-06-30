@@ -18,7 +18,7 @@
     <span>{ counter.count }</span>
     <div class="counterButton">
       <button on:click={() => counter.count += 1}>+</button>
-      <button on:click={() => counter.count -= 1}>-</button>
+      <button on:click={() => counter.count >= 1 ? counter.count -= 1: null}>-</button>
       <button on:click={() => counter.count = 0}>0</button>
       <button class="deleteButton" on:click={() => removeCounter(counter)}>x</button>
     </div>
