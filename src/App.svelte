@@ -6,7 +6,7 @@
 
   function titleList(counters: Array<counterItem>) {
     titleListResult = "";
-    for(let counter of counters){
+    for(let counter of counters) {
       titleListResult += titleListResult && counter.title ? `, ${counter.title}`: counter.title; 
     }
     return titleListResult;
@@ -17,9 +17,7 @@
 
 <div class="App">
   <h1>Multiple counter</h1>
-
   <CounterList />
-
   <p>
     title list: {titleList($counters)}
   </p>

@@ -5,7 +5,7 @@
     $counters = $counters.filter(counter => counter !== deleteCounter)
   }
   
-  function addCounter(){
+  function addCounter() {
     $counters = $counters.concat({count: 0, title: "new"});
   }
 </script>
@@ -20,7 +20,7 @@
       <button on:click={() => counter.count += 1}>+</button>
       <button on:click={() => counter.count -= 1}>-</button>
       <button on:click={() => counter.count = 0}>0</button>
-      <button class="deleteButton" on:click={() => removeCounter(counter)} >x</button>
+      <button class="deleteButton" on:click={() => removeCounter(counter)}>x</button>
     </div>
   </div>
 {/each}
