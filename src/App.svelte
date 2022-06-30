@@ -10,6 +10,8 @@
     }
     return titleListResult;
   }
+  
+  $: sum = $counters.reduce((previousValue, currentValue) => previousValue + currentValue.count, 0);
 </script>
 
 <h1>Multiple counter</h1>
@@ -18,4 +20,7 @@
 
 <div>
   title list: {titleList($counters)}
+</div>
+<div>
+  sum of count: {sum}
 </div>
