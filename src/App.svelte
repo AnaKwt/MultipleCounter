@@ -1,5 +1,5 @@
 <script lang="ts">
-	let name = 'world';
+  import { counters } from './stores';
 </script>
 
-<h1>Hello {name}!</h1>
+<h1>Multiple counter</h1>
