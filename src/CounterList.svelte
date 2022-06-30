@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { counters } from './stores';
+  import { counters, counterItem } from './stores';
 
-  function removeCounter(deleteCounter: {count:number, title:string}) {
+  function removeCounter(deleteCounter: counterItem) {
     $counters = $counters.filter(counter => counter !== deleteCounter)
   }
   

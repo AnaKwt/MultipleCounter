@@ -1,11 +1,12 @@
 <script lang="ts">
-  import { counters } from './stores';
+  import { counters, counterItem } from './stores';
   import CounterList from './CounterList.svelte';
   
   let titleListResult: string;
-  function titleList($counters) {
+
+  function titleList(counters: Array<counterItem>) {
     titleListResult = "";
-    for(let counter of $counters){
+    for(let counter of counters){
       titleListResult += titleListResult && counter.title ? `, ${counter.title}`: counter.title; 
     }
     return titleListResult;
