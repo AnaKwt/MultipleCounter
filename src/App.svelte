@@ -14,13 +14,24 @@
   $: sum = $counters.reduce((previousValue, currentValue) => previousValue + currentValue.count, 0);
 </script>
 
-<h1>Multiple counter</h1>
+<div class="App">
+  <h1>Multiple counter</h1>
 
-<CounterList />
+  <CounterList />
 
-<div>
-  title list: {titleList($counters)}
+  <p>
+    title list: {titleList($counters)}
+  </p>
+  <p>
+    sum of count: {sum}
+  </p>
 </div>
-<div>
-  sum of count: {sum}
-</div>
+
+<style>
+  .App {
+    text-align: center;
+  }
+  p {
+    margin: 0;
+  }
+</style>
